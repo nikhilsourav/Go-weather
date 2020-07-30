@@ -1,7 +1,7 @@
 // module
-const express = require("../JSON/node_modules/express");
+const express = require("express");
 const path = require("path");
-const hbs = require("../JSON/node_modules/hbs");
+const hbs = require("hbs");
 const app = express();
 const port = process.env.PORT || 3000;
 
