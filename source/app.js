@@ -3,6 +3,7 @@ const express = require("../JSON/node_modules/express");
 const path = require("path");
 const hbs = require("../JSON/node_modules/hbs");
 const app = express();
+const port = process.env.PORT || 3000;
 
 // path
 const publicPath = path.join(__dirname, "../public");
@@ -24,6 +25,6 @@ app.get("/weather", (req, res) => {
   res.render("weather");
 });
 
-app.listen(3000, (req, res) => {
-  console.log("server is up and listening on port 3000");
+app.listen(port, (req, res) => {
+  console.log("server is up and listening on port " + port);
 });
