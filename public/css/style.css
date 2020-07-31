@@ -8,7 +8,7 @@
   font-weight: bold;
   font-size: 20px;
   color: white;
-  overflow: auto;
+  overflow: hidden;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 body {
@@ -27,16 +27,16 @@ body {
 
 li {
   list-style: none;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 a {
   text-decoration: none;
   padding: 2px;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 a:hover {
   transform: translateX(5px);
-  text-shadow: 0.5px 0.5px 3px rgba(27, 38, 44,0.5);
+  text-shadow: 0.5px 0.5px 3px rgba(27, 38, 44, 0.5);
   transition: all 0.2s;
 }
 nav {
@@ -46,7 +46,7 @@ nav {
   align-items: center;
   width: 100%;
   box-shadow: 5px 5px 2px solid black;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 .logo {
   margin-left: 25px;
@@ -58,18 +58,18 @@ nav {
 .logo h2 {
   margin-left: 15px;
 }
-.logo a:hover{
+.logo a:hover {
   transform: none;
   transition: none;
 }
 ul {
   flex: 1;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 ul li {
   display: flex;
   justify-content: space-around;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 
 /* main */
@@ -77,11 +77,11 @@ ul li {
   position: absolute;
   top: 30%;
   left: 8%;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 .main-content {
   height: 66vh;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 
 /* index */
@@ -90,14 +90,14 @@ ul li {
   font-family: "Nunito";
   margin-bottom: 15px;
   font-weight: 450;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 .main-content p {
   font-size: 1.4em;
   font-weight: normal;
   font-family: "Montserrat";
   margin-bottom: 40px;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 
 .btn {
@@ -117,34 +117,9 @@ ul li {
 .btn:hover {
   color: teal;
   background-color: #fff;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 
-@media (max-width: 750px) {
-  .main-content {
-    width: fit-content;
-    margin: auto;
-    height: 66vh;
-    transition: all 0.5s;
-  }
-  * {
-    font-size: 1em;
-    transition: all 0.5s;
-  }
-}
-@media (max-width: 500px) {
-  .main {
-    position: absolute;
-    top: 30%;
-    transition: all 0.5s;
-  }
-  .main-content {
-    width: fit-content;
-    margin: auto;
-    height: 68vh;
-    transition: all 0.5s;
-  }
-}
 /* index */
 
 /* weather */
@@ -152,33 +127,28 @@ ul li {
   width: 69vw;
   margin: 20vh auto;
   text-align: center;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
-@media(max-width:600px){
-  .weather-main{
-    margin: 20vh auto;
-    transition: all 0.5s;
-  }
-}
+
 .caption {
   font-size: 1.4em;
   font-weight: normal;
   font-family: "Nunito";
   margin-bottom: 1em;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 .input {
   text-shadow: none;
   padding: 0 0.5em;
   color: #000;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 #msg1,
 #msg2,
 #msg3 {
   margin: 0.8em 0;
   text-align: center;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 /* weather */
 
@@ -188,23 +158,23 @@ ul li {
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 .reddit {
   width: 30px;
   margin-left: 10px;
   margin-bottom: 2px;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 .spotify {
   width: 30px;
   margin-left: 15px;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 .youtube {
   width: 30px;
   margin-left: 15px;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 /* sm links */
 
@@ -214,22 +184,74 @@ ul li {
   position: absolute;
   bottom: 4%;
   left: 8%;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
-h4{
+h4 {
   position: fixed;
   right: 8%;
   bottom: 5.5%;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
+
+/*  media queries */
 @media (max-width: 500px) {
   .weather-links {
     bottom: 2%;
-    transition: all 0.5s;
+    transition: all 0.25s;
   }
-  h4{
+  h4 {
     bottom: 3.5%;
-    transition: all 0.5s;
+    transition: all 0.25s;
   }
 }
-
+@media (max-width: 450px) {
+  .logo h2 {
+    margin-left: 2px;
+  }
+  * {
+    font-size: 0.97em;
+  }
+  h4 {
+    position: static;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    transition: all 0.2s;
+  }
+}
+@media (max-height: 500px) {
+  * {
+    font-size: 1em;
+  }
+}
+@media (max-width: 750px) {
+  .main-content {
+    width: fit-content;
+    margin: auto;
+    height: 66vh;
+    transition: all 0.25s;
+  }
+  * {
+    font-size: 1em;
+    transition: all 0.25s;
+  }
+}
+@media (max-width: 500px) {
+  .main {
+    position: absolute;
+    top: 25%;
+    transition: all 0.25s;
+  }
+  .main-content {
+    width: fit-content;
+    margin: auto;
+    height: 73vh;
+    transition: all 0.25s;
+  }
+}
+@media (max-width: 600px) {
+  .weather-main {
+    margin: 20vh auto;
+    transition: all 0.25s;
+  }
+}
