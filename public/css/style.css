@@ -125,7 +125,7 @@ ul li {
 /* weather */
 .weather-main {
   width: 69vw;
-  margin: 20vh auto;
+  margin: 10vh auto;
   text-align: center;
   transition: all 0.25s;
 }
@@ -215,7 +215,7 @@ h4 {
     position: static;
     display: block;
     width: fit-content;
-    margin: auto;
+    margin: 5px auto;
     transition: all 0.2s;
   }
 }
