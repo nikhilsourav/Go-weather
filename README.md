@@ -24,4 +24,4 @@ Features:
 
 - Accurate current temperature.
 - Daily Forecast.
-- Latitude and Longitude of entered location
+- Latitude and Longitude of entered location.
